@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Web Application</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>Web Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Web Application</h1>
-<p th:text="'Client: ' + ${client}" />
-<p th:text="'Version: ' + ${version}" />
-<p th:text="'(c) ' + ${year} + ', Rodrigo Bento'" />
+<header>
+	<h1>Web Application</h1>
+	<div>
+		<b>Client: </b><span th:text="${client ?: 'Not Set'}"/>
+	</div>
+	<div>
+		<b>Version: </b><span th:text="${version ?: 'Not Set'}"/>
+	</div>
+</header>
+<footer>
+	&copy; <span th:text="${year ?: '2022'}"/>, <span th:text="${author ?: 'Rodrigo Bento'}"/>
+</footer>
 </body>
 </html>

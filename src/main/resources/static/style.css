@@ -1,3 +1,27 @@
+* {
+	font-family: Courier;
+}
+
 body {
-    background: lightblue;
+	background: lightblue;
+}
+
+header > h1 {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+header > div {
+	display: inline-block;
+	margin-left: 8px;
+	float: right;
+}
+
+footer {
+	position: absolute;
+	margin: 8px;
+	bottom: 0;
+	right: 0;
 }
