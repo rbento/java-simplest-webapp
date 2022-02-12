@@ -13,7 +13,8 @@ public class WebController {
     public String index(Model model) {
         model.addAttribute("client", System.getenv("APP_CLIENT"));
         model.addAttribute("version", System.getenv("APP_VERSION"));
-        model.addAttribute("year", LocalDate.now().getYear());
+		model.addAttribute("author", System.getenv("APP_AUTHOR"));
+		model.addAttribute("year", LocalDate.now().getYear());
         return "index";
     }
 }
