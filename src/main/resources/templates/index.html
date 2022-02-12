@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Web Application</h1>
+<p th:text="'Client: ' + ${client}" />
+<p th:text="'Version: ' + ${version}" />
+<p th:text="'(c) ' + ${year} + ', Rodrigo Bento'" />
+</body>
+</html>
