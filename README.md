@@ -20,7 +20,7 @@ Expected Environment Variables:
 - [Maven][2]
 - [Docker Desktop][3]
 
-### Build with Maven
+### Build Maven Project
 ---
 
 ```bash
@@ -28,37 +28,48 @@ cd java-simplest-webapp
 mvn clean install
 ```
 
-### Docker Image
+### Build Docker Image
 ---
 
-##### Local Build
+**Default Platform**
 
+Example below assumes building on an Apple Silicon M1 Pro.
+
+**Target Platform (AMD64)**
 ```bash
-docker build -t webapp:latest .
-docker run --rm -p80:8080 --name webapp webapp:latest
+docker build --platform=linux/amd64 -t robento/webapp:1.0.0-amd64 .
 ```
 
-##### Get From Docker Hub
+**Target Platform (ARM64)** 
+```bash
+docker build -t rodbento/webapp:1.0.0-arm64 .
+```
 
-There are 3 versions published to Docker Hub, each just containing a different background colour.
+### Run Docker Image From Local Build
+---
+
+```
+docker run --rm -p80:8080 --name webapp -d webapp:latest-arm64
+```
+
+### Run Pre-Built Docker Image
+---
+**Target Platform (AMD64)**
+
+```bash
+docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.0-amd64
+```
+
+**Target Platform (ARM64)** (Apple Silicon M1 Pro)
+```bash
+docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.0-arm64
+```
+
+#### See it on Docker Hub
+
+There are 2 versions published to Docker Hub, each containing a different background colour to emphasize a new deployment.
 
 See [https://hub.docker.com/repository/docker/rodbento/webapp][4]
-
-
-### Run Pre-Built Image
----
-
-
-*x86-64*
-```bash
-docker run --rm -p80:8080 --name webapp rodbento/webapp:1.0.0-amd64
-```
-
-*ARM64* (Apple Silicon M1 Pro)
-
-```bash
-docker run --rm -p80:8080 --name webapp rodbento/webapp:1.0.0-arm64
-```
 
 [1]:https://jdk.java.net/17/
 [2]:https://maven.apache.org
