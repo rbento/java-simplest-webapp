@@ -16,7 +16,7 @@ Expected Environment Variables:
 ### Requirements
 ---
 
-- [Java 17][1]
+- [Java 19][1]
 - [Maven][2]
 - [Docker Desktop][3]
 
@@ -37,7 +37,7 @@ Example below assumes building on an Apple Silicon M1 Pro.
 
 **Target Platform (AMD64)**
 ```bash
-docker build --platform=linux/amd64 -t robento/webapp:1.0.0-amd64 .
+docker build --platform=linux/amd64 -t rodbento/webapp:1.0.0-amd64 .
 ```
 
 **Target Platform (ARM64)** 
@@ -71,7 +71,7 @@ There are 2 versions published to Docker Hub, each containing a different backgr
 
 See [https://hub.docker.com/repository/docker/rodbento/webapp][4]
 
-[1]:https://jdk.java.net/17/
+[1]:https://jdk.java.net/19/
 [2]:https://maven.apache.org
 [3]:https://www.docker.com/
 [4]:https://hub.docker.com/repository/docker/rodbento/webapp
