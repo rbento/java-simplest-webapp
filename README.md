@@ -7,7 +7,9 @@ The simplest Spring Boot web application.
 
 Helpful while testing rolling upgrades requiring different versions of the same web application.
 
-Accessing the context / displays a page with information from environment variables and a different background colour for each different version.
+The background can be changed in [style.css](https://github.com/rbento/java-simplest-webapp/blob/da64a2228d6574d01fe1c2be300e443b645c8095/src/main/resources/static/style.css#L6) and build it with a different version.
+
+After deploying, access it at [http://localhost/](http://localhost/) to display a page with information from environment variables and a different background colour for each different version built.
 
 Expected Environment Variables:
 
