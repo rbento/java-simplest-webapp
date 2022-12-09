@@ -37,12 +37,12 @@ Example below assumes building on an Apple Silicon M1 Pro.
 
 **Target Platform (AMD64)**
 ```bash
-docker build --platform=linux/amd64 -t rodbento/webapp:1.0.0-amd64 .
+docker build --platform=linux/amd64 -t rodbento/webapp:1.0.1-amd64 .
 ```
 
 **Target Platform (ARM64)** 
 ```bash
-docker build -t rodbento/webapp:1.0.0-arm64 .
+docker build -t rodbento/webapp:1.0.1-arm64 .
 ```
 
 ### Run Docker Image
@@ -50,12 +50,12 @@ docker build -t rodbento/webapp:1.0.0-arm64 .
 **Target Platform (AMD64)**
 
 ```bash
-docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.0-amd64
+docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.1-amd64
 ```
 
 **Target Platform (ARM64)** (Apple Silicon M1 Pro)
 ```bash
-docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.0-arm64
+docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.1-arm64
 ```
 
 #### See it on Docker Hub
