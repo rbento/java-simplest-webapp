@@ -45,14 +45,7 @@ docker build --platform=linux/amd64 -t rodbento/webapp:1.0.0-amd64 .
 docker build -t rodbento/webapp:1.0.0-arm64 .
 ```
 
-### Run Docker Image From Local Build
----
-
-```
-docker run --rm -p80:8080 --name webapp -d webapp:latest-arm64
-```
-
-### Run Pre-Built Docker Image
+### Run Docker Image
 ---
 **Target Platform (AMD64)**
 
