@@ -7,11 +7,6 @@ The simplest Spring Boot web application.
 
 Helpful while testing rolling upgrades requiring different versions of the same web application.
 
-
-- 
-
-After deploying, access it at [http://localhost](http://localhost) to display a page with information from environment variables and a different background colour for each different version built.
-
 Expected Environment Variables:
 
 - APP_AUTHOR, APP_CLIENT, APP_VERSION
@@ -64,6 +59,10 @@ docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.1-amd64
 ```bash
 docker run --rm -p80:8080 --name webapp -d rodbento/webapp:1.0.1-arm64
 ```
+
+### 5. Access it
+
+The webapp should be available at [http://localhost](http://localhost)
 
 #### See it on Docker Hub
 
